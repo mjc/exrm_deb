@@ -29,7 +29,7 @@ defmodule ExrmDeb.Utils.Compression do
         end
       end)
 
-    cmd_opts = opts ++ ["-czf", "--format=gnu", "--no-recursion", outfile, "."]
+    cmd_opts = opts ++ ["-acf", outfile, "."]
 
     {_ignore, 0} = System.cmd(
       tar_cmd,
